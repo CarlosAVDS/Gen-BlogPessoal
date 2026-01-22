@@ -25,11 +25,22 @@ function Perfil() {
 					alt="Capa do Perfil"
 				/>
 
-				<img
+				{/* <img
 					className="rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10"
-					src={usuario.foto}
+					src={usuario.foto === '' ? "https://ik.imagekit.io/jx4y334fq/ChatGPT%20Image%2022%20de%20jan.%20de%202026,%2011_29_07.png" : usuario.foto}
 					alt={`Foto de perfil de ${usuario.nome}`}
+				/> */}
+
+				<img
+					src={
+						usuario.foto === ''
+							? 'https://ik.imagekit.io/jx4y334fq/userpfp.png'
+							: usuario.foto
+					}
+					alt={`Foto de perfil de ${usuario.nome}`}
+					className=" w-56 h-56 rounded-full object-cover mx-auto mt-[-8rem] border-8 border-white relative z-10 bg-white"
 				/>
+
 
 				<div
 					className="relative mt-[-6rem] h-72 flex flex-col 
